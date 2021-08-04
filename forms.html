@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+
+<body>
+    <h1>Forms Demo</h1>
+    <form action="/tacos">
+        <!-- action here specify where we want to send the form data when form is submitted-->
+        <p>
+            <label for="username">Enter a username:</label>
+            <input type="text" placeholder="username" id="username" name="username">
+            <!--here when we submit our form then the data which is entered in the usename box assigns to the name and then search goes on..so name has this functionality-->
+        </p>
+        <p>
+            <label for="password">Enter a password:</label>
+            <input type="password" placeholder="password" id="password" name="password">
+        </p>
+        <p>
+            <label for="color">Enter a color:</label> <!-- label and the input should have a unique same id -->
+            <input type="color" id="color" name="color">
+        </p>
+        <p>
+            <label>
+                Enter a number:
+                <input type="number" placeholder="number" id="number" name="number">
+            </label>
+        </p>
+        <!--this submits the form because submit is written in type-->
+        <button type="submit">this submits the form </button>
+
+        <!--this won't submits the form because button is the type -->
+        <button type="button">this dont submit the form</button>
+
+        <!--this is the default way to submit-->
+        <button>submits!!!!</button>
+
+        <!--this submits the form but it is not preffered-->
+        <input type="submit" value="click me!">
+
+    </form>
+    <hr>
+
+    <!--this won't submits the form because it is outside of the form-->
+    <button type="submit">this is outside of form(won't submit) </button>
+
+    <h2>Hijacking Searches</h2>
+    <h3>Google Search</h3>
+
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Google Search</button>
+    </form>
+
+    <h3>Youtube Search</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Youtube Search</button>
+    </form>
+
+    <form action="/birds">
+        <input type="checkbox" name="agree_tos" id="agree">
+        <label for="agree">i agree to everything</label>
+        <p>
+            <label for="xs">xs:</label>
+            <input type="radio" name="size" id="xs" value="xs">
+
+            <label for="s">s:</label>
+            <input type="radio" name="size" id="s" value="s">
+
+            <label for="m">m:</label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+        <p>
+            <label for="meal">please select a meal type</label>
+            <select name="meal" id="meal">
+                <option value="veg">vegetarian</option>
+                <option value="fish">fish</option>
+                <option value="sweets">sweets</option>
+            </select>
+        </p>
+        <p>
+            <label for="audio">audio</label>
+            <input type="range" min="1" max="100" value="25" step="7" name="audio" id="audio">
+        </p>
+        <p>
+            <label for="requests">want ot request anything?</label><br>
+            <textarea name="request" id="requests" rows="15" cols="40" placeholder="type here"></textarea>
+        </p>
+        <button>submit</button>
+    </form>
+
+    <h2>Validations demo</h2>
+    <form action="/demo">
+        <label for="name">first name</label>
+        <input type="text" name="name" id="name" required>
+        <p>
+            <label for="username">username</label>
+            <input type="username" name="username" id="username" required maxlength="20" minlength="5">
+            </label>
+        </p>
+        <p>
+            <input type="email">
+        </p>
+        <p>
+            <input type="url">
+        </p>
+        <button>submit</button>
+    </form>
+
+
+
+</body>
+
+</html>
